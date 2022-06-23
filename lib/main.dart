@@ -1,27 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
+import 'package:go_router_mobile/routes/router.dart';
+import 'package:go_router_mobile/services/notifications/notifications_service.dart';
 
-import 'pages/pages.dart';
+NotificationsService notificationsService = NotificationsService();
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await Firebase.initializeApp();
+
   runApp(const GoRouterMobile());
 }
 
-class GoRouterMobile extends StatelessWidget {
+class GoRouterMobile extends StatefulWidget {
   const GoRouterMobile({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  @override
+  State<GoRouterMobile> createState() => _GoRouterMobileState();
+}
+
+class _GoRouterMobileState extends State<GoRouterMobile> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomePage(),
+    return MaterialApp.router(
+      title: 'Go Router and Push Notifications',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.blue),
+      routeInformationParser: router.routeInformationParser,
+      routerDelegate: router.routerDelegate,
+      routeInformationProvider: router.routeInformationProvider,
     );
   }
 }

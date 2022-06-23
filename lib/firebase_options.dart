@@ -26,10 +26,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -58,5 +55,15 @@ class DefaultFirebaseOptions {
     messagingSenderId: '803567249626',
     projectId: 'go-router-67c5b',
     storageBucket: 'go-router-67c5b.appspot.com',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyAr1oc7A29IlU3V4mRg_aPKIN9Wg-wjbfI',
+    appId: '1:803567249626:ios:be43eca7955a6807d2dde3',
+    messagingSenderId: '803567249626',
+    projectId: 'go-router-67c5b',
+    storageBucket: 'go-router-67c5b.appspot.com',
+    iosClientId: '803567249626-h6nn0ipah97ig30g0j3qvr4dfkjsr3ol.apps.googleusercontent.com',
+    iosBundleId: 'com.example.goRouterMobile',
   );
 }

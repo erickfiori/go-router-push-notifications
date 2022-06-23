@@ -7,42 +7,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:803567249626:android:5630cac8fab4dc18d2dde3",
-        "android_client_info": {
-          "package_name": "br.com.go_router"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "803567249626-uqolrpl6tmq2htjojqtid5rpkkulhi1v.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDKtxegzIeQLq7P3gb35v2-BcTX-CFApnE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "803567249626-uqolrpl6tmq2htjojqtid5rpkkulhi1v.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "803567249626-h6nn0ipah97ig30g0j3qvr4dfkjsr3ol.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.goRouterMobile"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:803567249626:android:e508ff27b23b6ff0d2dde3",
         "android_client_info": {
           "package_name": "com.example.go_router_mobile"
